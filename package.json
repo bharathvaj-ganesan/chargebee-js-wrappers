@@ -1,0 +1,8 @@
+{
+  "name": "chargebee-js-wrappers",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {},
+  "author": "Chargebee (https://www.chargebee.com)",
+  "license": "MIT"
+}

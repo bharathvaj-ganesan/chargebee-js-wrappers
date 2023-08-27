@@ -1,0 +1,28 @@
+name: Bug Report
+description: File a bug report relating to the @chargebee/chargebee-js loading wrapper.
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! This project is a very thin wrapper around Chargebee.js providing seamless integrations with commonly used JS frameworks like Vue, React, Angular, etc. Please only file issues here that you believe represent bugs with the loader, not Chargebee.js itself.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Please include what you were trying to accomplish, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: What browser and operating system are you seeing this issue on? What versions?
+      placeholder: Chrome 114.0.5735.198 on macOS 11.6
+  - type: input
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Please include a link to a runnable reproduction, if you can. This will greatly increase the likelihood we are able to help. A Glitch or CodeSandbox link would be perfect.
+      placeholder: https://glitch.com/edit/#!/your-project

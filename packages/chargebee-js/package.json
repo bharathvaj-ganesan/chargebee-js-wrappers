@@ -1,0 +1,62 @@
+{
+  "name": "@chargebee/chargebee-js",
+  "version": "2.1.0",
+  "description": "chargebee.js loading utility",
+  "main": "dist/chargebee.js",
+  "module": "dist/chargebee.esm.js",
+  "jsnext:main": "dist/chargebee.esm.js",
+  "types": "types/index.d.ts",
+  "typings": "types/index.d.ts",
+  "scripts": {
+    "test:unit": "jest",
+    "test": "pnpm lint && pnpm test:unit && pnpm typecheck",
+    "lint": "eslint '{src}/**/*.{ts,js}' && pnpm prettier-check",
+    "typecheck": "tsc",
+    "dev": "rollup -c -w",
+    "build": "pnpm clean && pnpm rollup -c",
+    "clean": "rimraf dist",
+    "prepublishOnly": "echo \"\nPlease use ./scripts/publish instead\n\" && exit 1",
+    "prettier": "prettier './**/*.{js,ts,md,html,css}' --write",
+    "prettier-check": "prettier './**/*.{js,ts,md,html,css}' --check"
+  },
+  "keywords": [
+    "Chargebee",
+    "Chargebee.js",
+    "Chargebee components"
+  ],
+  "author": "Chargebee (https://www.chargebee.com)",
+  "license": "MIT",
+  "homepage": "https://www.chargebee.com/checkout-portal-docs/",
+  "files": [
+    "dist",
+    "types",
+    "lazy",
+    "lazy.d.ts"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^20.5.6",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "conditional-type-checks": "^1.0.5",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.8.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.6.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^1.29.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "ts-jest": "^24.3.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.1.2",
+    "zx": "^4.2.0"
+  }
+}
