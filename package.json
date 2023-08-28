@@ -2,7 +2,9 @@
   "name": "chargebee-js-wrappers",
   "private": true,
   "version": "0.0.0",
-  "scripts": {},
+  "scripts": {
+    "clean": "find . -name 'node_modules' -exec rm -rf {} +"
+  },
   "author": "Chargebee (https://www.chargebee.com)",
   "license": "MIT"
 }

@@ -10,13 +10,15 @@
   },
   "dependencies": {
     "@chargebee/chargebee-js": "workspace:*",
-    "@types/node": "20.5.6",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.7",
     "chargebee": "^2.26.1",
     "next": "13.4.19",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.5.6",
+    "@types/react": "17.0.33",
+    "@types/react-dom": "18.2.0",
     "typescript": "5.2.2"
   }
 }
