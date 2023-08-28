@@ -25,3 +25,8 @@ This is a mono repository, please open the respective package module using the a
 
 - [Chargebee.js Docs](https://www.chargebee.com/checkout-portal-docs/)
 - [Chargebee.js Tutorials](https://www.chargebee.com/tutorials/)
+- [Chargebee Components - JS Docs](https://chargebee.com/checkout-portal-docs/components-fields-integrations.html#quick-start-integration)
+
+
+## Support
+Have any queries regarding the implementation? Reach out to [support@chargebee.com](mailto:support@chargebee.com)

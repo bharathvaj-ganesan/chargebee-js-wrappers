@@ -1,0 +1,47 @@
+{
+  "name": "@chargebee/chargebee-js-vue-wrapper",
+  "version": "0.3.2",
+  "description": "Vue wrapper for Chargebee.js Components",
+  "homepage": "https://github.com/chargebee/chargebee-js-wrappers/tree/master/chargebee-js-vue#readme",
+  "bugs": {
+    "url": "https://github.com/chargebee/chargebee-js-wrappers/issues",
+    "email": "support@chargebee.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chargebee/chargebee-js-wrappers.git"
+  },
+  "main": "dist/chargebee-js-vue-wrapper.cjs.js",
+  "module": "dist/chargebee-js-vue-wrapper.es.js",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@chargebee/chargebee-js": "workspace:^",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "@vue/compiler-sfc": "^3.2.37",
+    "vite": "^2.9.9",
+    "vue": "^3.3.4"
+  },
+  "license": "MIT",
+  "author": "Vivek <vivek@chargebee.com>",
+  "contributors": [
+    "Dinesh <dinesh@chargebee.com>"
+  ],
+  "keywords": [
+    "chargebee",
+    "chargebee.js",
+    "chargebee components",
+    "chargebee vue",
+    "chargebee vue wrapper",
+    "chargebee.js vue"
+  ]
+}
