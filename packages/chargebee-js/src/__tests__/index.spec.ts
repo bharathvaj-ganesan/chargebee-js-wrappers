@@ -2,7 +2,7 @@
 
 const dispatchScriptEvent = (eventType: string): void => {
   const injectedScript = document.querySelector(
-    'script[src="https://js.chargebee.com/v2"]'
+    'script[src="https://js.chargebee.com/v2/chargebee.js"]'
   );
 
   if (!injectedScript) {
@@ -18,7 +18,7 @@ describe('Chargebee.js ESM', () => {
      * Cleanup the injected DOMs
      */
     const script = document.querySelector(
-      'script[src="https://js.chargebee.com/v2"], script[src="https://js.chargebee.com/v2/"]'
+      'script[src="https://js.chargebee.com/v2/chargebee.js"]'
     );
     if (script && script.parentElement) {
       script.parentElement.removeChild(script);
@@ -31,12 +31,12 @@ describe('Chargebee.js ESM', () => {
     require('../index');
 
     expect(
-      document.querySelector('script[src="https://js.chargebee.com/v2"]')
+      document.querySelector('script[src="https://js.chargebee.com/v2/chargebee.js"]')
     ).toBe(null);
 
     return Promise.resolve().then(() => {
       expect(
-        document.querySelector('script[src="https://js.chargebee.com/v2"]')
+        document.querySelector('script[src="https://js.chargebee.com/v2/chargebee.js"]')
       ).not.toBe(null);
     });
   });
@@ -48,7 +48,7 @@ describe('Chargebee.js ESM', () => {
 
     return new Promise((resolve) => setTimeout(resolve)).then(() => {
       expect(
-        document.querySelector('script[src="https://js.chargebee.com/v2"]')
+        document.querySelector('script[src="https://js.chargebee.com/v2/chargebee.js"]')
       ).toBe(null);
     });
   });
@@ -90,7 +90,7 @@ describe('Chargebee.js ESM', () => {
       expect(console.warn).not.toHaveBeenCalled();
     });
 
-    it('rejects when Chargebee. is not added to the window for some reason', async () => {
+    it('rejects when Chargebee.js is not added to the window for some reason', async () => {
       const { init } = require(requirePath);
       const option = {
         site: 'acme-test'

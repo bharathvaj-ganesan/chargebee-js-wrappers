@@ -1,7 +1,6 @@
 import { Chargebee, ChargebeeInstance, InitOptions } from '@/types';
 
 const CDN = 'https://js.chargebee.com/v2/chargebee.js';
-const CDN_REGEX = /^https:\/\/js\.chargebee\.com\/v2\/?(\?.*)?$/;
 const EXISTING_SCRIPT_MESSAGE =
   'Appears to be Chargebee.js is already loaded. Make sure you are not trying to load it again.';
 let chargebeePromise: Promise<Chargebee | null> | null = null;
@@ -14,7 +13,7 @@ export const findScript = (): HTMLScriptElement | null => {
   for (let i = 0; i < scripts.length; i++) {
     const script = scripts[i];
 
-    if (!CDN_REGEX.test(script.src)) {
+    if (!(CDN === script.src)) {
       continue;
     }
 

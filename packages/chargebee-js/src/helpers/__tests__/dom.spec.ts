@@ -1,7 +1,7 @@
 import { findScript } from '../dom';
 
 describe('findScript', () => {
-  const URL = 'https://js.chargebee.com/v2';
+  const URL = 'https://js.chargebee.com/v2/chargebee.js';
   afterEach(() => {
     const script = document.querySelector(`script[src="${URL}"]`);
 

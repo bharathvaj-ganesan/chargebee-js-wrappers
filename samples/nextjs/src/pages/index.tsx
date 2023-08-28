@@ -14,7 +14,7 @@ export default function Home() {
       hostedPage: async () => {
         const res = await fetch('/api/checkout');
         const data = await res.json();
-        return data
+        return data;
       },
       success: () => {
         alert('You have successfully checked out');
@@ -31,26 +31,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <button onClick={openCheckout}>Open Checkout</button>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
-              By <Image src="/vercel.svg" alt="Vercel Logo" className={styles.vercelLogo} width={100} height={24} priority />
-            </a>
-          </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image className={styles.logo} src="/next.svg" alt="Next.js Logo" width={180} height={37} priority />
-        </div>
-
-        {/* <div className={styles.center}>
-        
-        </div> */}
+        <h2 className={styles.center}>
+          <div>Get started by clicking on this button</div>
+          <button className={styles.button} onClick={openCheckout}>Open Checkout</button>
+        </h2>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" className={styles.card} target="_blank" rel="noopener noreferrer">
