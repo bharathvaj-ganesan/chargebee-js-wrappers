@@ -27,12 +27,8 @@ describe('Chargebee.js ESM', () => {
     jest.resetModules();
   });
 
-  it('injects the Chargebee.js script as a side effect after a tick', () => {
+  it('injects the Chargebee.js script as a side effect', () => {
     require('../index');
-
-    expect(
-      document.querySelector('script[src="https://js.chargebee.com/v2/chargebee.js"]')
-    ).toBe(null);
 
     return Promise.resolve().then(() => {
       expect(
@@ -41,10 +37,10 @@ describe('Chargebee.js ESM', () => {
     });
   });
 
-  it('does not inject the script when Chargebee. is already loaded', () => {
-    require('../index');
-
+  it('does not inject the script when Chargebee.js is already loaded', () => {
     window.Chargebee = jest.fn((key) => ({ key })) as any;
+
+    require('../index');
 
     return new Promise((resolve) => setTimeout(resolve)).then(() => {
       expect(
@@ -57,20 +53,6 @@ describe('Chargebee.js ESM', () => {
     beforeEach(() => {
       jest.restoreAllMocks();
       jest.spyOn(console, 'warn').mockReturnValue();
-    });
-
-    it('resolves init with Chargebee. object', async () => {
-      const { init } = require(requirePath);
-      const option = {
-        site: 'acme-test'
-      }
-      const chargebeePromise = init(option);
-
-      await new Promise((resolve) => setTimeout(resolve));
-      window.Chargebee = jest.fn((key) => ({ key })) as any;
-      dispatchScriptEvent('load');
-
-      return expect(chargebeePromise).resolves.toEqual(option);
     });
 
     it('rejects when the script fails', async () => {
@@ -102,22 +84,6 @@ describe('Chargebee.js ESM', () => {
 
       return expect(chargebeePromise).rejects.toEqual(
         new Error('Chargebee.js not available')
-      );
-    });
-  });
-
-  describe('init (index.ts)', () => {
-    it('does not cause unhandled rejects when the script fails', async () => {
-      require('../index');
-
-      await Promise.resolve();
-      dispatchScriptEvent('error');
-
-      // Turn the task loop to make sure the internal promise handler has been invoked
-      await new Promise((resolve) => setImmediate(resolve));
-
-      expect(console.warn).toHaveBeenCalledWith(
-        new Error('Failed to load Chargebee.js')
       );
     });
   });

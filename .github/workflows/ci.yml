@@ -23,4 +23,6 @@ jobs:
         node-version: 18
         cache: 'pnpm'
 
-    - run: yarn run test:unit
+    - run: pnpm install
+
+    - run: pnpm run -r test:unit

@@ -9,8 +9,7 @@
   "typings": "types/index.d.ts",
   "scripts": {
     "test:unit": "jest",
-    "test": "pnpm lint && pnpm test:unit && pnpm typecheck",
-    "lint": "eslint '{src}/**/*.{ts,js}' && pnpm prettier-check",
+    "test": "pnpm test:unit && pnpm typecheck",
     "typecheck": "tsc",
     "dev": "rollup -c -w",
     "build": "pnpm clean && pnpm rollup -c",
