@@ -25,4 +25,4 @@ jobs:
 
     - run: pnpm install
 
-    - run: pnpm run -r test:unit
+    - run: pnpm run -r test

@@ -21,6 +21,26 @@ This package is a thin wrapper around [Chargebee's Components & Fields](https://
 
 This is a mono repository, please open the respective package module using the above links to get started with them.
 
+This repo is powered by smart [pnpm workspaces](https://pnpm.io/workspaces) and fast build system [nx](https://nx.dev/).
+
+```bash
+
+# Install
+pnpm i
+
+# To run in dev
+npx nx run-many --target=dev --all
+
+# To Build all
+npx nx run-many --target=build --all
+
+# To Build in specific target
+npx nx build @chargebee/chargebee-js
+
+# To run test in specific target
+npx nx test @chargebee/chargebee-js
+```
+
 ### Documentation
 
 - [Chargebee.js Docs](https://www.chargebee.com/checkout-portal-docs/)

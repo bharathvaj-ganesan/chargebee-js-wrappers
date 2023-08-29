@@ -5,7 +5,7 @@ import type { Chargebee, InitOptions } from '@/types';
 
 let chargebeePromise: Promise<Chargebee | null> = Promise.resolve(null);
 
-if (!window.Chargebee) {
+if (typeof window !== 'undefined' && !window.Chargebee) {
   chargebeePromise = loadScript();
 }
 
