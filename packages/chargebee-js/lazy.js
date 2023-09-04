@@ -3,4 +3,4 @@
  * else they might to import like '@chargebee/chargebee-js/dist/lazy'.
  * A simple DevX.
  */
-module.exports = require('./dist/lazy.js');
+module.exports = require('./dist/chargebee.lazy.js');
