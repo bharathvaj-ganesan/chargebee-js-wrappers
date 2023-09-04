@@ -27,7 +27,8 @@
   "license": "MIT",
   "homepage": "https://www.chargebee.com/checkout-portal-docs/",
   "bugs": {
-    "url": "https://github.com/chargebee/js/issues"
+    "url": "https://github.com/chargebee/cb-js/issues",
+    "email": "support@chargebee.com"
   },
   "files": [
     "dist",

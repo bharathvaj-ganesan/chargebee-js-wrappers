@@ -2,14 +2,14 @@
   "name": "@chargebee/chargebee-js-vue-wrapper",
   "version": "0.3.2",
   "description": "Vue wrapper for Chargebee.js Components",
-  "homepage": "https://github.com/chargebee/chargebee-js-wrappers/tree/master/chargebee-js-vue#readme",
+  "homepage": "https://github.com/chargebee/cb-js/tree/master/chargebee-js-vue#readme",
   "bugs": {
-    "url": "https://github.com/chargebee/chargebee-js-wrappers/issues",
+    "url": "https://github.com/chargebee/cb-js/issues",
     "email": "support@chargebee.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chargebee/chargebee-js-wrappers.git"
+    "url": "git+https://github.com/chargebee/cb-js.git"
   },
   "main": "dist/chargebee-js-vue-wrapper.cjs.js",
   "module": "dist/chargebee-js-vue-wrapper.es.js",

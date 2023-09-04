@@ -2,14 +2,14 @@
   "name": "@chargebee/chargebee-js-angular-wrapper",
   "version": "2.0.0",
   "description": "Angular wrapper for Chargebee.js Components",
-  "homepage": "https://github.com/chargebee/chargebee-js-wrappers/tree/master/chargebee-js-angular#readme",
+  "homepage": "https://github.com/chargebee/cb-js/tree/master/chargebee-js-angular#readme",
   "bugs": {
-    "url": "https://github.com/chargebee/chargebee-js-wrappers/issues",
+    "url": "https://github.com/chargebee/cb-js/issues",
     "email": "support@chargebee.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chargebee/chargebee-js-wrappers.git"
+    "url": "git+https://github.com/chargebee/cb-js.git"
   },
   "license": "MIT",
   "author": "Vivek <vivek@chargebee.com>",
