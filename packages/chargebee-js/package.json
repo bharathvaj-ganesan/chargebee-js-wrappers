@@ -1,18 +1,18 @@
 {
   "name": "@chargebee/chargebee-js",
   "version": "0.0.0",
-  "description": "Chargebee.js ESM",
+  "description": "Chargebee.js ES module loading utility",
   "main": "dist/chargebee.js",
   "module": "dist/chargebee.esm.js",
   "jsnext:main": "dist/chargebee.esm.js",
   "types": "types/index.d.ts",
   "typings": "types/index.d.ts",
   "scripts": {
-    "test:unit": "jest",
-    "test": "pnpm test:unit && pnpm typecheck",
-    "typecheck": "tsc",
-    "dev": "rollup -c -w",
     "build": "pnpm clean && pnpm rollup -c",
+    "dev": "rollup -c -w",
+    "test": "pnpm test:unit && pnpm typecheck",
+    "test:unit": "jest",
+    "typecheck": "tsc",
     "clean": "rimraf dist",
     "prettier": "prettier './**/*.{js,ts,md,html,css}' --write",
     "prettier-check": "prettier './**/*.{js,ts,md,html,css}' --check"
@@ -20,7 +20,8 @@
   "keywords": [
     "Chargebee",
     "Chargebee.js",
-    "Chargebee components"
+    "Chargebee components",
+    "Components & Fields"
   ],
   "author": "Chargebee (https://www.chargebee.com)",
   "license": "MIT",
