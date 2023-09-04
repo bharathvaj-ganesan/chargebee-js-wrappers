@@ -69,7 +69,7 @@ This package includes TypeScript declarations for Chargebee.js.
 
 ### Import as a side effect
 
-Import `@chargebe/chargebe-js` as a side effect in code that will be included throughout your site (e.g. your root module). This will make sure the Chargebee.js script tag is inserted immediately upon page load.
+Import `@chargebee/chargebee-js` as a side effect in code that will be included throughout your site (e.g. your root module). This will make sure the Chargebee.js script tag is inserted immediately upon page load.
 
 ```js
 import '@chargebee/chargebee-js';
