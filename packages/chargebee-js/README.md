@@ -61,11 +61,17 @@ Head over to [Chargebee JS reference docs](https://www.chargebee.com/checkout-po
 If you have enabled [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) for you application,
 make sure to [whitelist Chargebee.js in your directives](https://support.chargebee.com/support/solutions/articles/241740-content-security-policy-for-the-checkout-page).
 
-## Typescript support
+### Lazy import
 
-This package includes TypeScript declarations for Chargebee.js.
+If you would like to use `init` in your application, but defer loading the Chargebee.js script until `init` is first called, use the alternative `@chargebee/chargebee-js/lazy` import path:
 
-> Note: We may release new [minor and patch](https://semver.org/) versions of `@chargebee/chargebee-js` with small but backwards-incompatible fixes to the type declarations. These changes will not affect Chargebee.js itself.
+```js
+import * as Chargebee from '@chargebee/chargebee-js/lazy';
+
+const chargebee = await Chargebee.init({
+  //...options
+});
+```
 
 ### Import as a side effect
 
@@ -86,14 +92,8 @@ one. When you call `init`, it will use the existing script tag.
 <script src="https://js.chargebee.com/v2/chargebee.js" async></script>
 ```
 
-### Lazy import
+## Typescript support
 
-If you would like to use `init` in your application, but defer loading the Chargebee.js script until `init` is first called, use the alternative `@chargebee/chargebee-js/lazy` import path:
+This package includes TypeScript declarations for Chargebee.js.
 
-```js
-import * as Chargebee from '@chargebee/chargebee-js/lazy';
-
-const chargebee = await Chargebee.init({
-  //...options
-});
-```
+> Note: We may release new [minor and patch](https://semver.org/) versions of `@chargebee/chargebee-js` with small but backwards-incompatible fixes to the type declarations. These changes will not affect Chargebee.js itself.
