@@ -1,6 +1,12 @@
+dist
 .DS_Store
-.cache
 node_modules
-dist/*
+coverage
+temp
+explorations
+TODOs.md
 *.log
-.vim
+.idea
+.eslintcache
+dts-build/packages
+*.tsbuildinfo
